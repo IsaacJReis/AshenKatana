@@ -71,17 +71,7 @@ public class BasicMovimentPlayer : MonoBehaviour
             Flip();
         }
 
-        if (currentTarget != null) {
-            float distance = Vector2.Distance(transform.position, currentTarget.position);
-
-            if (distance > stopDistance) {
-                transform.position = Vector2.MoveTowards(
-                    transform.position,
-                    currentTarget.position,
-                    followSpeed * Time.deltaTime
-                );
-            }
-        }
+       
 
     }
 
