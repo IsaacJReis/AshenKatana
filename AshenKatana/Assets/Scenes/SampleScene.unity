@@ -781,7 +781,7 @@ Transform:
   m_GameObject: {fileID: 160309687}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 12.15, y: -1.04, z: 0}
+  m_LocalPosition: {x: 29.63, y: -1.08, z: 0}
   m_LocalScale: {x: 5, y: 5, z: 5}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -853,6 +853,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 100
   invincibleDuration: 0.5
+  playerDead: 0
 --- !u!1 &203172981
 GameObject:
   m_ObjectHideFlags: 0
@@ -920,7 +921,7 @@ Transform:
   m_GameObject: {fileID: 203172981}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 18.039999, y: -0.39, z: -10}
+  m_LocalPosition: {x: 35.52, y: -0.43000007, z: -10}
   m_LocalScale: {x: 0.5932157, y: 0.5932157, z: 0.5932157}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -2332,7 +2333,7 @@ Transform:
   m_GameObject: {fileID: 519420028}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 18.101463, y: 0.035140008, z: -10}
+  m_LocalPosition: {x: 35.52, y: -0.43000007, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3554,9 +3555,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 5195500821582717841, guid: 6ecf5bcec20adfa429a788f660f29ff5, type: 3}
       insertIndex: -1
       addedObject: {fileID: 775722589}
-    - targetCorrespondingSourceObject: {fileID: 5195500821582717841, guid: 6ecf5bcec20adfa429a788f660f29ff5, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 775722591}
   m_SourcePrefab: {fileID: 100100000, guid: 6ecf5bcec20adfa429a788f660f29ff5, type: 3}
 --- !u!1 &775722587 stripped
 GameObject:
@@ -3623,58 +3621,6 @@ MonoBehaviour:
   interactKey: 101
   promptUI: {fileID: 1100000109}
   questPanel: {fileID: 1576754047}
---- !u!212 &775722591
-SpriteRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 775722587}
-  m_Enabled: 1
-  m_CastShadows: 0
-  m_ReceiveShadows: 0
-  m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 0
-  m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 0
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 2114688159
-  m_SortingLayer: -2
-  m_SortingOrder: -13
-  m_Sprite: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
-  m_FlipY: 0
-  m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
-  m_AdaptiveModeThreshold: 0.5
-  m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
-  m_MaskInteraction: 0
-  m_SpriteSortPoint: 0
 --- !u!1001 &804601202
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4834,7 +4780,7 @@ Transform:
   m_GameObject: {fileID: 1119570343}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 47.73, y: -3.05, z: 0}
+  m_LocalPosition: {x: 48.3, y: -3.05, z: 0}
   m_LocalScale: {x: 5, y: 5, z: 5}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -4971,10 +4917,10 @@ MonoBehaviour:
   maxHealth: 4
   moveSpeed: 2
   chaseRange: 5
-  attackDamage: 10
+  attackDamage: 100
   attackRange: 1.55
-  attackCooldown: 1.2
-  hitStunDuration: 0.8
+  attackCooldown: 1.5
+  hitStunDuration: 1
   deathAnimationDuration: 1
   spriteDefaultFacingLeft: 1
 --- !u!1 &1128871626
@@ -8740,7 +8686,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1576754046
 RectTransform:
   m_ObjectHideFlags: 0

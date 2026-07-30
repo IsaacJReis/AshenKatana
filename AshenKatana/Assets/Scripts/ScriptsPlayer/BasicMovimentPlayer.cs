@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Reflection;
 using UnityEngine;
 
 public class BasicMovimentPlayer : MonoBehaviour
@@ -21,6 +22,8 @@ public class BasicMovimentPlayer : MonoBehaviour
     private int movemntingHash = Animator.StringToHash("movementing");
     private int jumpingHash = Animator.StringToHash("jumping");
     private int attackingHash = Animator.StringToHash("attacking");
+
+    
 
 
     [SerializeField] private AudioSource stepsAudioSource;
@@ -102,10 +105,9 @@ public class BasicMovimentPlayer : MonoBehaviour
         JumpAudioSource.PlayOneShot(JumpAudioClip[Random.Range(0, JumpAudioClip.Length)]);
     }
 
-    /*private void Attack() {
+    private void Attack() {
         AttackAudioSource.PlayOneShot(AttackAudioClip[Random.Range(0, AttackAudioClip.Length)]);
-    }*/
-    void Flip()
+    }    void Flip()
     {
         facingRight = !facingRight;
 

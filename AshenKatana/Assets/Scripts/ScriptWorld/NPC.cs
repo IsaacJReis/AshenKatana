@@ -2,6 +2,7 @@ using UnityEngine.UI;
 using TMPro;
 using UnityEngine;
 using System.Collections;
+using System.Security.Cryptography;
 
 
 public class NPC : MonoBehaviour, IInteractable {
@@ -17,18 +18,23 @@ public class NPC : MonoBehaviour, IInteractable {
     public GameObject pressEText;
 
     void Update() {
-        // Se o player está perto e apertou E
+
+        if (playerIsNear && Input.GetKeyDown(KeyCode.Escape))
+        {
+            EndDialogue();
+        }
+        // Se o player estï¿½ perto e apertou E
         if (playerIsNear && Input.GetKeyDown(KeyCode.E)) {
 
-            // Se o diálogo NÃO está ativo, começa ele
+            // Se o diï¿½logo Nï¿½O estï¿½ ativo, comeï¿½a ele
             if (!isDialogueActive) {
                 StartDialogue();
             }
-            // Se JÁ ESTÁ ativo e JÁ terminou de digitar, vai para a próxima
+            // Se Jï¿½ ESTï¿½ ativo e Jï¿½ terminou de digitar, vai para a prï¿½xima
             else if (!isTyping) {
                 NextLine();
             }
-            // Se está digitando, pula a animação 
+            // Se estï¿½ digitando, pula a animaï¿½ï¿½o 
             else {
                 CompletarLinhaImediatamente();
             }
@@ -36,7 +42,7 @@ public class NPC : MonoBehaviour, IInteractable {
     }
 
     public void Interact() {
-        // Esta função agora é chamada pelo Update acima
+        // Esta funï¿½ï¿½o agora ï¿½ chamada pelo Update acima
     }
 
     void StartDialogue() {
@@ -49,7 +55,7 @@ public class NPC : MonoBehaviour, IInteractable {
         portraitImage.sprite = dialogueData.npcPortrait;
         dialoguePanel.SetActive(true);
 
-        // Se o seu PauseControler trava o jogo, garanta que ele não trave o script
+        // Se o seu PauseControler trava o jogo, garanta que ele nï¿½o trave o script
         PauseControler.SetPause(true);
 
         StartCoroutine(TypeLine());
