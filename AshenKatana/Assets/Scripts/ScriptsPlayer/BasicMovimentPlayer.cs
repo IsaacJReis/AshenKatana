@@ -106,7 +106,7 @@ public class BasicMovimentPlayer : MonoBehaviour
     }
 
     private void Attack() {
-        AttackAudioSource.PlayOneShot(AttackAudioClip[Random.Range(0, AttackAudioClip.Length)]);
+      
     }    void Flip()
     {
         facingRight = !facingRight;

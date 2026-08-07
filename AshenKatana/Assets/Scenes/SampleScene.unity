@@ -781,7 +781,7 @@ Transform:
   m_GameObject: {fileID: 160309687}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 29.63, y: -1.08, z: 0}
+  m_LocalPosition: {x: -9.43, y: -1.08, z: 0}
   m_LocalScale: {x: 5, y: 5, z: 5}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -921,7 +921,7 @@ Transform:
   m_GameObject: {fileID: 203172981}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 35.52, y: -0.43000007, z: -10}
+  m_LocalPosition: {x: -3.54, y: -0.43000007, z: -10}
   m_LocalScale: {x: 0.5932157, y: 0.5932157, z: 0.5932157}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -2333,7 +2333,7 @@ Transform:
   m_GameObject: {fileID: 519420028}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 35.52, y: -0.43000007, z: -10}
+  m_LocalPosition: {x: -2.0195632, y: 0.70882, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4917,7 +4917,7 @@ MonoBehaviour:
   maxHealth: 4
   moveSpeed: 2
   chaseRange: 5
-  attackDamage: 100
+  attackDamage: 4
   attackRange: 1.55
   attackCooldown: 1.5
   hitStunDuration: 1
